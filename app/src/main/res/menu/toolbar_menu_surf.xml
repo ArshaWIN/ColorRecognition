@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_menu"
+        android:orderInCategory="200"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_mode"
+                android:title="@string/choose_mode">
+                <menu>
+                    <group android:checkableBehavior="single">
+                        <item
+                            android:id="@+id/action_extra_mode"
+                            android:title="@string/extra_mode" />
+                        <item
+                            android:id="@+id/action_default_mode"
+                            android:checked="true"
+                            android:title="@string/default_mode" />
+                    </group>
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/action_history"
+                android:title="@string/history" />
+        </menu>
+    </item>
+
+</menu>

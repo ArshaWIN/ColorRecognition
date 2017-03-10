@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Color Recognizer</string>
+    <string name="gallery">Галерея</string>
+    <string name="take_photo">Сделать снимок</string>
+    <string name="add_photo">Добавить фото</string>
+    <string name="upload_logo">Загрузите фото</string>
+    <string name="take_color">Распознайте цвет</string>
+    <string name="settings">settings</string>
+    <string name="camera">camera</string>
+    <string name="history">История</string>
+    <string name="choose_mode">Выбор режима</string>
+    <string name="dialog_tittle">Добавление</string>
+    <string name="dialog_tittle_delete">Удаление</string>
+    <string name="dialog_delete_content">Удалить этот цвет из истории?</string>
+    <string name="dialog_content">Добавить текущий цвет в историю?</string>
+    <string name="ok">Ок</string>
+    <string name="cancel">Отмена</string>
+    <string name="color_to_history">Цвет добавлен в историю</string>
+    <string name="color_history">История цветов</string>
+    <string name="default_mode">Режим основных цветов</string>
+    <string name="extra_mode">Режим экстра цветов</string>
+</resources>

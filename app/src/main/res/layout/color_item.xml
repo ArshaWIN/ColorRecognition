@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mihailenko.ilya.colorrecognizer2016.activities.viewmodels.ColorItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/cardview_background"
+        >
+
+        <FrameLayout
+            android:id="@+id/color_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/borders"
+            android:layout_centerVertical="true"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/current_color"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/color_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:layout_toEndOf="@+id/color_container"
+            android:layout_toStartOf="@+id/delete" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cross"
+            android:onClick="@{viewModel.onDeleteClick}"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            />
+    </RelativeLayout>
+</layout>
