@@ -10,6 +10,7 @@ import android.provider.BaseColumns;
 
 import com.mihailenko.ilya.colorrecognizer2016.models.MyColor;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +25,16 @@ public class SQLHelper extends SQLiteOpenHelper implements BaseColumns {
         String selectQuery = "SELECT * FROM " + DATABASE_TABLE;
 
         SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+        cursor = db.rawQuery(selectQuery, null);
+        } catch (android.database.SQLException e) {
+            e.printStackTrace();
+        }
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor == null) {
+            return new ArrayList<>();
+        }
         if (cursor.moveToFirst()) {
             do {
 

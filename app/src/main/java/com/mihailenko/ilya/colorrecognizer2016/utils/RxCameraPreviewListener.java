@@ -28,14 +28,11 @@ public class RxCameraPreviewListener implements Camera.PreviewCallback {
 
     private String COLOR_MODE = Constants.DEFAULT_TYPE;
 
-    private String currentColorHex;
-    private String currentColorName;
-
     private int redValue = 0;
     private int blueValue = 0;
     private int greenValue = 0;
 
-    long lastTime = System.currentTimeMillis();
+    private long lastTime = System.currentTimeMillis();
 
 
     public RxCameraPreviewListener() {
@@ -68,8 +65,8 @@ public class RxCameraPreviewListener implements Camera.PreviewCallback {
         bp = Bitmap.createBitmap(bp, bp.getWidth() / 2 - 10, bp.getHeight() / 2 - 10, 20, 20);
         getAverageColor(bp);
 
-        currentColorName = ColorUtils.getInstanse().getColorNameFromRgb(redValue, greenValue, blueValue, COLOR_MODE);
-        currentColorHex = ColorUtils.getInstanse().getColorHexFromRGB(redValue, greenValue, blueValue);
+        String currentColorName = ColorUtils.getInstanse().getColorNameFromRgb(redValue, greenValue, blueValue, COLOR_MODE);
+        String currentColorHex = ColorUtils.getInstanse().getColorHexFromRGB(redValue, greenValue, blueValue);
 
         return new ColorInfo(currentColorHex, currentColorName);
     }
